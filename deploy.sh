@@ -592,7 +592,7 @@ install_docker() {
 }
 
 install_tsp() {
-    bash <(curl -L -s https://raw.githubusercontent.com/liberal-boy/tls-shunt-proxy/master/dist/install.sh)
+    bash <(curl -L -s https://raw.githubusercontent.com/ckn4/tls-shunt-proxy/master/dist/install.sh)
     judge "安装 TLS-Shunt-Proxy"
     chown -R tls-shunt-proxy:tls-shunt-proxy /etc/ssl/tls-shunt-proxy
     command -v setcap >/dev/null 2>&1 && setcap "cap_net_bind_service=+ep" /usr/local/bin/tls-shunt-proxy
